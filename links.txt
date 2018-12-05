@@ -1,5 +1,4 @@
-
-CREDITS
+###### Links ###########
 
 Pipeline HTML CSS Template
 http://www.templatemo.com/tm-498-stimulus
@@ -9,3 +8,15 @@ http://getbootstrap.com/
 
 Images
 http://startupstockphotos.com/
+
+
+
+###### My Personal Social Media Website Links #########
+
+Facebook: https://www.facebook.com/edger7chris
+Twitter: https://twitter.com/wenrong_chris
+Google Plus: https://plus.google.com/115574042182587818133
+LinkedIn: https://www.linkedin.com/in/toshio97/
+Github: https://github.com/chengboonrong
+
+
