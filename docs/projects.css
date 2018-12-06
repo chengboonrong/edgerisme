@@ -19,7 +19,6 @@ a{
   padding:60px 10px;
   margin:30px 0px;    
   transition: 0.5s;
-  transform: scale(1);
 }
 
 .text{
@@ -31,7 +30,6 @@ a{
 }
 
 .box-part:hover {
-  transform: scale(1.1);
   border-color: #ffc600;
   box-shadow: 0 0 1rem #ffc600;
 }
