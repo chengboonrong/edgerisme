@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <head>
+      <title>Getting Started with ml5.js</title>
+      <script src="dist/ml5.min.js"></script>
+      <script src="dist/p5.min.js"></script>
+      <script src="dist/addons/p5.dom.min.js"></script>
+    </head>
+
+  <body>
+    <h1>Image classification using MobileNet</h1>
+    <p>The MobileNet model labeled this as
+    <mark><span id="result">...</span></mark> with a confidence of
+    <mark><span id="probability">...</span></p></mark>
+
+    <script type="text/javascript">
+      
+      // Initialize the Image Classifier method with MobileNet. A callback needs to be passed.
+      const classifier = ml5.imageClassifier('MobileNet', modelReady);
+
+      // A variable to hold the image we want to classify
+      let img;
+
+      function setup() {
+        noCanvas();
+        // Load the image
+        img = createImg('images/cat.jpg', imageReady);
+      }
+
+      // Change the status when the model loads.
+      function modelReady(){
+        console.log("Model Loaded !")
+      }
+
+      // When the image has been loaded,
+      // get a prediction for that image
+      function imageReady() {
+        classifier.predict(img, gotResult);
+        // You can also specify the amount of classes you want
+        // classifier.predict(img, 10, gotResult);
+      }
+
+      // A function to run when we get any errors and the results
+      function gotResult(err, results) {
+        if (err) {
+          console.error(err);
+        }
+        // The results are in an array ordered by probability.
+        console.log(results);
+        select('#result').html(results[0].className);
+        select('#probability').html(nf(results[0].probability, 0, 2));
+      }
+
+    </script>
+
+  </body>
+</html>
