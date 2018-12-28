@@ -86,11 +86,12 @@
       minHand.style.transform = `rotate(${minDegrees}deg)`;
 
       const hour = now.getHours();
-      const hourDegrees = ((hour / 24) * 360 + 90);
+      console.log(hour);
+      const hourDegrees = ((hour / 24) * 360 - 45);
       hourHand.style.transform = `rotate(${hourDegrees}deg)`;
 
-      console.log(secDegrees, minDegrees, hourDegrees)
-      console.log(hour + ':' + min + ':' + sec);
+      // console.log(hourDegrees, minDegrees, secDegrees)
+      // console.log(hour + ':' + min + ':' + sec);
     }
 
     setInterval(setDate, 1000);
